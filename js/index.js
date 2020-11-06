@@ -4,13 +4,13 @@
 function clickPelle() {
   navigator.vibrate(0);
   $("#vibrolino").text("pellino");
-  navigator.vibrate([500, 1000, 500, 1000, 500, 1000]);
+  navigator.vibrate([50, 500, 50, 500, 50, 500]);
 }
 
 function clickCapelli() {
   navigator.vibrate(0);
   $("#vibrolino").text("capellino");
-  navigator.vibrate([1000, 500, 1000, 500, 1000, 500]);
+  navigator.vibrate([50, 50, 50, 50, 50, 50, 50, 50]);
 }
 
 function clickVestito() {
@@ -22,7 +22,7 @@ function clickVestito() {
 function clickSfondo() {
   navigator.vibrate(0);
   $("#vibrolino").text("sfondino");
-  navigator.vibrate([500, 100, 500, 100, 500, 100]);
+  navigator.vibrate([1000, 50, 1000, 50, 1000, 50]);
 }
 
 
