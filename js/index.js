@@ -1,23 +1,27 @@
 function clickPelle() {
-  $("#vibrolino").text("pellino")
+  $("#vibrolino").text("pellino");
+  $("#vibrolino").vibrate({pattern: [5, 200, 20]});
 }
 
 function clickCapelli() {
-  $("#vibrolino").text("capellino")
+  $("#vibrolino").text("capellino");
+  $("#vibrolino").vibrate({pattern: [5, 200, 20]});
 }
 
 function clickVestito() {
   $("#vibrolino").text("vestitino");
-  $('#vib1').vibrate({stopAfterTime:2});
+  $("#vibrolino").vibrate({pattern: [5, 200, 20]});
 }
 
 function clickSfondo() {
-  $("#vibrolino").text("sfondino")
+  $("#vibrolino").text("sfondino");
+  $("#vibrolino").vibrate({pattern: [5, 200, 20]});
 }
 
 
 function clickCielo() {
-  $("#vibrolino").text("cielino")
+  $("#vibrolino").text("cielino");
+  $("#vibrolino").vibrate({pattern: [5, 200, 20]});
 }
 
 $("#pelle").on("click", clickPelle)
@@ -28,31 +32,18 @@ $("#cielo").on("click", clickCielo)
 
 
 
-$(document).ready(function () {
-  $('#vib1').on('click', function() {
-    $('#vib1').vibrate({stopAfterTime:2});
-  });
-
-  $('#vib2').on('click', function() {
-    $('#vib2').vibrate({stopAfterTime:5, vibrateClass:'redSignal'});
-  });
-
-  $('#vib3').on('click', function() {
-    $('#vib3').vibrate({stopAfterTime:2, callBack: function() {
-      $('#vib3').text('Vibration Done');
-    }});
-  });
-});
-</script>
-
-<div id="demoDiv">
-  <div class="signals" id="vib1">
-    Vibrate me for 2s
-  </div>
-  <div class="signals" id="vib2">
-    Vibrate me for 5s and turn me red
-  </div>
-  <div class="signals" id="vib3">
-    Change my text
-  </div>
-</div>
+// $(document).ready(function () {
+//   $('#vib1').on('click', function() {
+//     $('#vib1').vibrate({stopAfterTime:2});
+//   });
+//
+//   $('#vib2').on('click', function() {
+//     $('#vib2').vibrate({stopAfterTime:5, vibrateClass:'redSignal'});
+//   });
+//
+//   $('#vib3').on('click', function() {
+//     $('#vib3').vibrate({stopAfterTime:2, callBack: function() {
+//       $('#vib3').text('Vibration Done');
+//     }});
+//   });
+// });
