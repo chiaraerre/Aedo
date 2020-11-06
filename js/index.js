@@ -1,26 +1,30 @@
+
+
+
 function clickPelle() {
   $("#vibrolino").text("pellino");
-  $("#vibrolino .button").vibrate({ pattern: [1000, 200, 1000]});
+  $(".image").vibrate("long");
 }
 
 function clickCapelli() {
   $("#vibrolino").text("capellino");
-  $("#vibrolino .button").vibrate({ pattern: [500, 100, 500]});
+  navigator.vibrate(Infinity);
 }
 
 function clickVestito() {
   $("#vibrolino").text("vestitino");
-  $("#vibrolino .button").vibrate({ pattern: [1000, 100, 1000,100,1000]});
+  $("#vibrolino").vibrate("long");
 }
 
 function clickSfondo() {
   $("#vibrolino").text("sfondino");
-  $("#vibrolino .button").vibrate({ pattern: [1000, 200, 1000]});
+  $("#vibrolino").vibrate("long");
 }
 
 
 function clickCielo() {
   $("#vibrolino").text("cielino");
+  $("#vibrolino").vibrate("long");
 }
 
 $("#pelle").on("click", clickPelle)
