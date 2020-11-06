@@ -10,7 +10,7 @@ function clickPelle() {
 function clickCapelli() {
   navigator.vibrate(0);
   $("#vibrolino").text("capellino");
-  navigator.vibrate(Infinity);
+  navigator.vibrate(1000);
 }
 
 function clickVestito() {
