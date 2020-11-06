@@ -3,7 +3,7 @@
 
 function clickPelle() {
   $("#vibrolino").text("pellino");
-  navigator.vibrate("long");
+  navigator.vibrate([1000]);
 }
 
 function clickCapelli() {
