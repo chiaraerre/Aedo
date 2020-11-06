@@ -1,9 +1,6 @@
-navigator.vibrate(1000);
-
-
 function clickPelle() {
   $("#vibrolino").text("pellino");
-  $(".image").vibrate("long");
+  $("#vibrolino .button").vibrate({duration: 2000, trigger: "touchstart"});
 }
 
 function clickCapelli() {
