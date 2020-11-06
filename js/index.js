@@ -1,5 +1,5 @@
 function clickPelle() {
-  $("#vibrolino").text("manolino")
+  $("#vibrolino").text("pellino")
 }
 
 function clickCapelli() {
