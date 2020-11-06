@@ -1,4 +1,3 @@
-navigator.vibrate(1000);
 
 function clickPelle() {
   $("#vibrolino").text("pellino");
@@ -31,3 +30,13 @@ $("#capelli").on("click", clickCapelli)
 $("#vestito").on("click", clickVestito)
 $("#sfondo").on("click", clickSfondo)
 $("#cielo").on("click", clickCielo)
+
+var isMobile = (/iPhone|iPod|iPad|Android|BlackBerry/).test(navigator.userAgent);
+
+$(".button").on(isMobile ? 'touchstart' : 'mousedown', function(e) {
+    navigator.vibrate(Infinity); // Infinity is a number
+});
+
+$(".button").on(isMobile ? 'touchend' : 'mouseup', function(e) {
+    navigator.vibrate(0);
+});
