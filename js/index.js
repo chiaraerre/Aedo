@@ -29,21 +29,3 @@ $("#capelli").on("click", clickCapelli)
 $("#vestito").on("click", clickVestito)
 $("#sfondo").on("click", clickSfondo)
 $("#cielo").on("click", clickCielo)
-
-
-
-// $(document).ready(function () {
-//   $('#vib1').on('click', function() {
-//     $('#vib1').vibrate({stopAfterTime:2});
-//   });
-//
-//   $('#vib2').on('click', function() {
-//     $('#vib2').vibrate({stopAfterTime:5, vibrateClass:'redSignal'});
-//   });
-//
-//   $('#vib3').on('click', function() {
-//     $('#vib3').vibrate({stopAfterTime:2, callBack: function() {
-//       $('#vib3').text('Vibration Done');
-//     }});
-//   });
-// });
