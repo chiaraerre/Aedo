@@ -1,7 +1,7 @@
 
 function clickPelle() {
   $("#vibrolino").text("pellino");
-  navigator.vibrate(Infinity);
+  $(".image").vibrate("long");
 }
 
 function clickCapelli() {
