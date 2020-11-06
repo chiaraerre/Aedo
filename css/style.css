@@ -4,11 +4,18 @@
   font-size: 100px;
 }
 
-#sfondo {
+.svg-container {
+	display: inline-block;
+	position: relative;
+	height: 10%;
+	padding-bottom: 100%;
+	vertical-align: middle;
+	overflow: hidden;
 }
 
-.image {
-  width: 100px;
-  height: 100px;
-  cursor: cell;
+.svg-content {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
 }

@@ -1,25 +1,26 @@
-function clickCapelli() {
-  $("#vibrolino").text("capellino")
+function clickPelle() {
+  $("#vibrolino").text("manolino")
 }
 
-function clickMani() {
-  $("#vibrolino").text("manolino")
+function clickCapelli() {
+  $("#vibrolino").text("capellino")
 }
 
 function clickVestito() {
   $("#vibrolino").text("vestitino")
 }
 
-function clickFaccia() {
-  $("#vibrolino").text("faccino")
-}
-
 function clickSfondo() {
   $("#vibrolino").text("sfondino")
 }
 
+
+function clickCielo() {
+  $("#vibrolino").text("cielino")
+}
+
+$("#pelle").on("click", clickPelle)
 $("#capelli").on("click", clickCapelli)
-$("#mani").on("click", clickMani)
 $("#vestito").on("click", clickVestito)
-$("#faccia").on("click", clickFaccia)
 $("#sfondo").on("click", clickSfondo)
+$("#cielo").on("click", clickCielo)
