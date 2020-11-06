@@ -1,3 +1,5 @@
+navigator.vibrate(1000);
+
 
 function clickPelle() {
   $("#vibrolino").text("pellino");
