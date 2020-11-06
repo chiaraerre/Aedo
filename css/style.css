@@ -3,19 +3,3 @@
   color:pink;
   font-size: 100px;
 }
-
-.svg-container {
-	display: inline-block;
-	position: relative;
-	height: 10%;
-	padding-bottom: 100%;
-	vertical-align: middle;
-	overflow: hidden;
-}
-
-.svg-content {
-	display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
