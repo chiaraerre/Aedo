@@ -3,7 +3,7 @@
 
 function clickPelle() {
   $("#vibrolino").text("pellino");
-  $(".image").vibrate("long");
+  navigator.vibrate("long");
 }
 
 function clickCapelli() {
@@ -13,18 +13,18 @@ function clickCapelli() {
 
 function clickVestito() {
   $("#vibrolino").text("vestitino");
-  $("#vibrolino").vibrate("long");
+  navigator.vibrate("long");
 }
 
 function clickSfondo() {
   $("#vibrolino").text("sfondino");
-  $("#vibrolino").vibrate("long");
+  navigator.vibrate("long");
 }
 
 
 function clickCielo() {
   $("#vibrolino").text("cielino");
-  $("#vibrolino").vibrate("long");
+  navigator.vibrate("long");
 }
 
 $("#pelle").on("click", clickPelle)
