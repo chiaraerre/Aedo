@@ -4,25 +4,25 @@
 function clickPelle() {
   navigator.vibrate(0);
   $("#vibrolino").text("pellino");
-  navigator.vibrate([1000]);
+  navigator.vibrate([500, 1000, 500, 1000, 500, 1000]);
 }
 
 function clickCapelli() {
   navigator.vibrate(0);
   $("#vibrolino").text("capellino");
-  navigator.vibrate(1000);
+  navigator.vibrate([1000, 500, 1000, 500, 1000, 500]);
 }
 
 function clickVestito() {
   navigator.vibrate(0);
   $("#vibrolino").text("vestitino");
-  navigator.vibrate("long");
+  navigator.vibrate([500, 500, 500, 500, 500, 500]);
 }
 
 function clickSfondo() {
   navigator.vibrate(0);
   $("#vibrolino").text("sfondino");
-  navigator.vibrate("long");
+  navigator.vibrate([500, 100, 500, 100, 500, 100]);
 }
 
 
