@@ -1,27 +1,26 @@
 function clickPelle() {
   $("#vibrolino").text("pellino");
-  $("#vibrolino .button").vibrate({duration: 2000, trigger: "touchstart"});
+  $("#vibrolino .button").vibrate({ pattern: [1000, 200, 1000]});
 }
 
 function clickCapelli() {
   $("#vibrolino").text("capellino");
-  navigator.vibrate(Infinity);
+  $("#vibrolino .button").vibrate({ pattern: [500, 100, 500]});
 }
 
 function clickVestito() {
   $("#vibrolino").text("vestitino");
-  $("#vibrolino").vibrate("long");
+  $("#vibrolino .button").vibrate({ pattern: [1000, 100, 1000,100,1000]});
 }
 
 function clickSfondo() {
   $("#vibrolino").text("sfondino");
-  $("#vibrolino").vibrate("long");
+  $("#vibrolino .button").vibrate({ pattern: [1000, 200, 1000]});
 }
 
 
 function clickCielo() {
   $("#vibrolino").text("cielino");
-  $("#vibrolino").vibrate("long");
 }
 
 $("#pelle").on("click", clickPelle)
