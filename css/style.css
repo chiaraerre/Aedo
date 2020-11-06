@@ -1,0 +1,14 @@
+
+#vibrolino {
+  color:pink;
+  font-size: 100px;
+}
+
+#sfondo {
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+  cursor: cell;
+}
