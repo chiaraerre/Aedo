@@ -28,36 +28,6 @@ var currentAudio = audioGenerale;
     currentAudio.currentTime = 0;
   });
 
-
-// $(document).ready(function() {
-//   audioGenerale.addEventListener('ended', function() {
-//     this.play();
-//   }, false);
-//
-//   audioGenerale.addEventListener("canplay", function() {
-//     $("#length").text("Duration:" + audioGenerale.duration + " seconds");
-//     $("#status").text("Status: Ready to play").css("color", "green");
-//   });
-//
-//   audioGenerale.addEventListener("timeupdate", function() {
-//     $("#currentTime").text("Current second:" + audioGenerale.currentTime);
-//   });
-//
-//   $('#play').click(function() {
-//     audioGenerale.play();
-//     $("#status").text("Status: Playing");
-//   });
-//
-//   $('#pause').click(function() {
-//     audioGenerale.pause();
-//     $("#status").text("Status: Paused");
-//   });
-//
-//   $('#restart').click(function() {
-//     audioGenerale.currentTime = 0;
-//   });
-// });
-
 function restart() {
   audioGenerale.pause();
   audioPelle.pause();
@@ -77,7 +47,7 @@ function restart() {
 function clickPelle() {
   navigator.vibrate(0);
   $("#vibrolino").text("pellino");
-  navigator.vibrate([50, 500, 50, 500, 50, 500]);
+  navigator.vibrate([50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500]);
 
   restart();
   currentAudio = audioPelle;
@@ -88,7 +58,7 @@ function clickPelle() {
 function clickCapelli() {
   navigator.vibrate(0);
   $("#vibrolino").text("capellino");
-  navigator.vibrate([50, 50, 50, 50, 50, 50, 50, 50]);
+  navigator.vibrate([50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]);
 
   restart();
   currentAudio = audioCapelli;
@@ -99,7 +69,7 @@ function clickCapelli() {
 function clickVestito() {
   navigator.vibrate(0);
   $("#vibrolino").text("vestitino");
-  navigator.vibrate([500, 500, 500, 500, 500, 500]);
+  navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100]);
 
   restart();
   currentAudio = audioVestito;
@@ -110,7 +80,7 @@ function clickVestito() {
 function clickSfondo() {
   navigator.vibrate(0);
   $("#vibrolino").text("sfondino");
-  navigator.vibrate([1000, 50, 1000, 50, 1000, 50]);
+  navigator.vibrate([1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50]);
 
   restart();
   currentAudio = audioSfondo;
