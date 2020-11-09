@@ -141,8 +141,8 @@ function doubleClickCielo() {
   $("#status").text("Status: Sky Playing");
 }
 
-$("#pelle").on("dbclick", doubleClickPelle)
-$("#capelli").on("dbclick", doubleClickCapelli)
-$("#vestito").on("dbclick", doubleClickVestito)
-$("#sfondo").on("dbclick", doubleClickSfondo)
-$("#cielo").on("dbclick", doubleClickCielo)
+$("#pelle").on("dblclick", doubleClickPelle)
+$("#capelli").on("dblclick", doubleClickCapelli)
+$("#vestito").on("dblclick", doubleClickVestito)
+$("#sfondo").on("dblclick", doubleClickSfondo)
+$("#cielo").on("dblclick", doubleClickCielo)
