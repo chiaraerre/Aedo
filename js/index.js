@@ -46,7 +46,7 @@ function restart() {
 
 function clickPelle() {
   navigator.vibrate(0);
-  $("#vibrolino").text("pellino");
+  $("#vibrolino").text("Skin Vibrating");
   navigator.vibrate([50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500]);
 
   restart();
@@ -57,7 +57,7 @@ function clickPelle() {
 
 function clickCapelli() {
   navigator.vibrate(0);
-  $("#vibrolino").text("capellino");
+  $("#vibrolino").text("Hair Vibrating");
   navigator.vibrate([50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]);
 
   restart();
@@ -68,7 +68,7 @@ function clickCapelli() {
 
 function clickVestito() {
   navigator.vibrate(0);
-  $("#vibrolino").text("vestitino");
+  $("#vibrolino").text("Clothes Vibrating");
   navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100]);
 
   restart();
@@ -79,7 +79,7 @@ function clickVestito() {
 
 function clickSfondo() {
   navigator.vibrate(0);
-  $("#vibrolino").text("sfondino");
+  $("#vibrolino").text("Background (Not Vibrating)");
   navigator.vibrate([1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50]);
 
   restart();
@@ -90,7 +90,7 @@ function clickSfondo() {
 
 function clickCielo() {
   navigator.vibrate(0);
-  $("#vibrolino").text("cielino");
+  $("#vibrolino").text("Hair Vibrating");
   navigator.vibrate("long");
 
   restart();
@@ -99,46 +99,57 @@ function clickCielo() {
   // $("#status").text("Status: Sky Playing");
 }
 
+function stopVibrating() {
+  $("#vibrolino").text("Not Vibrating");
+  navigator.vibrate(0);
+}
+
 $("#pelle").on("mousedown", clickPelle)
 $("#capelli").on("mousedown", clickCapelli)
 $("#vestito").on("mousedown", clickVestito)
 $("#sfondo").on("mousedown", clickSfondo)
 $("#cielo").on("mousedown", clickCielo)
 
+$("#pelle").on("mouseup", stopVibrating)
+$("#capelli").on("mouseup", stopVibrating)
+$("#vestito").on("mouseup", stopVibrating)
+$("#sfondo").on("mouseup", stopVibrating)
+$("#cielo").on("mouseup", stopVibrating)
+
 
 function doubleClickPelle() {
   restart();
   currentAudio = audioPelle;
   currentAudio.play();
-  $("#status").text("Status: Skin Playing");
+  $("#status").text("Skin Playing");
 }
 
 function doubleClickCapelli() {
   restart();
   currentAudio = audioCapelli;
   currentAudio.play();
-  $("#status").text("Status: Hair Playing");
+  $("#status").text("Hair Playing");
 }
 
 function doubleClickVestito() {
   restart();
   currentAudio = audioVestito;
   currentAudio.play();
-  $("#status").text("Status: Clothes Playing");
+  $("#status").text("Clothes Playing");
 }
 
 function doubleClickSfondo() {
   restart();
   currentAudio = audioSfondo;
   currentAudio.play();
-  $("#status").text("Status: Background Playing");
+  $("#status").text("Background Playing");
 }
 
 function doubleClickCielo() {
   restart();
   currentAudio = audioGenerale;
   currentAudio.play();
-  $("#status").text("Status: Sky Playing");
+  $("#status").text("Sky Playing");
 }
 
 $("#pelle").on("dblclick", doubleClickPelle)
