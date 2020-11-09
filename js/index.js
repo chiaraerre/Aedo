@@ -29,6 +29,8 @@ $('#restart').click(function() {
 });
 
 function restart() {
+  $("#status").text("Not Playing");
+
   audioGenerale.pause();
   audioPelle.pause();
   audioCapelli.pause();
