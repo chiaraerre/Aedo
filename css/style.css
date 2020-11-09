@@ -9,23 +9,23 @@ html, body {
   position: absolute;
   top: 20px;
   color: #666;
-  font-size: 40px;
+  font-size: 1em;
 }
 
 .button {
-  opacity: 70%;
-  width: 40px;
-  height: 40px;
+  opacity: 40%;
+  width: 6vh;
+  height: 6vh;
   background: #fff;
   border: 1px solid black;
-  padding: 20px;
+  padding: 2vh;
   border-radius: 10px;
   display: inline-block;
-  margin: 10px;
+  margin: 1vh;
   cursor: pointer;
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 6vh;
+  height: 6vh;
 }
