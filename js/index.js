@@ -14,19 +14,29 @@ audioCielo.setAttribute('src', 'audio/smile.mp3');
 
 var currentAudio = audioGenerale;
 
-$('#play').click(function() {
+function playSound() {
   currentAudio.play();
-  $("#status").text("Status: Playing");
-});
+  $("#pause").css("background", "#fff");
+  $("#play").css("background", "#999");
+};
 
-$('#pause').click(function() {
+function pauseSound() {
   currentAudio.pause();
-  $("#status").text("Status: Paused");
-});
+  $("#play").css("background", "#fff");
+  $("#pause").css("background", "#999");
+};
 
-$('#restart').click(function() {
+function restartSound() {
   currentAudio.currentTime = 0;
-});
+  $("#restart").css("background", "#999");
+  setTimeout(function(){
+    $("#restart").css("background", "#fff");
+}, 200);
+};
+
+$('#play').click(playSound);
+$('#pause').click(pauseSound);
+$('#restart').click(restartSound);
 
 function restart() {
   $("#status").text("Not Playing");
@@ -44,6 +54,9 @@ function restart() {
   audioVestito.currentTime = 0;
   audioSfondo.currentTime = 0;
   audioCielo.currentTime = 0;
+
+  $("#play").css("background", "#fff");
+  $("#pause").css("background", "#999");
 };
 
 function clickPelle() {
@@ -102,35 +115,35 @@ $("#cielo").on("touchend", stopVibrating)
 function doubleClickPelle() {
   restart();
   currentAudio = audioPelle;
-  currentAudio.play();
+  playSound();
   $("#status").text("Skin Playing");
 }
 
 function doubleClickCapelli() {
   restart();
   currentAudio = audioCapelli;
-  currentAudio.play();
+  playSound();
   $("#status").text("Hair Playing");
 }
 
 function doubleClickVestito() {
   restart();
   currentAudio = audioVestito;
-  currentAudio.play();
+  playSound();
   $("#status").text("Clothes Playing");
 }
 
 function doubleClickSfondo() {
   restart();
   currentAudio = audioSfondo;
-  currentAudio.play();
+  playSound();
   $("#status").text("Background Playing");
 }
 
 function doubleClickCielo() {
   restart();
   currentAudio = audioGenerale;
-  currentAudio.play();
+  playSound();
   $("#status").text("Sky Playing");
 }
 
