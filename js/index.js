@@ -1,28 +1,121 @@
+var audioGenerale = document.createElement('audio');
+var audioPelle = document.createElement('audio');
+var audioCapelli = document.createElement('audio');
+var audioVestito = document.createElement('audio');
+var audioSfondo = document.createElement('audio');
+var audioCielo = document.createElement('audio');
+
+audioGenerale.setAttribute('src', 'audio/generale.mp3');
+audioPelle.setAttribute('src', 'audio/pelle.mp3');
+audioCapelli.setAttribute('src', 'audio/capelli.mp3');
+audioVestito.setAttribute('src', 'audio/vestito.mp3');
+audioSfondo.setAttribute('src', 'audio/sfondo.mp3');
+audioCielo.setAttribute('src', 'audio/smile.mp3');
+
+var currentAudio = audioGenerale;
+
+  $('#play').click(function() {
+    currentAudio.play();
+    $("#status").text("Status: Playing");
+  });
+
+  $('#pause').click(function() {
+    currentAudio.pause();
+    $("#status").text("Status: Paused");
+  });
+
+  $('#restart').click(function() {
+    currentAudio.currentTime = 0;
+  });
 
 
+// $(document).ready(function() {
+//   audioGenerale.addEventListener('ended', function() {
+//     this.play();
+//   }, false);
+//
+//   audioGenerale.addEventListener("canplay", function() {
+//     $("#length").text("Duration:" + audioGenerale.duration + " seconds");
+//     $("#status").text("Status: Ready to play").css("color", "green");
+//   });
+//
+//   audioGenerale.addEventListener("timeupdate", function() {
+//     $("#currentTime").text("Current second:" + audioGenerale.currentTime);
+//   });
+//
+//   $('#play').click(function() {
+//     audioGenerale.play();
+//     $("#status").text("Status: Playing");
+//   });
+//
+//   $('#pause').click(function() {
+//     audioGenerale.pause();
+//     $("#status").text("Status: Paused");
+//   });
+//
+//   $('#restart').click(function() {
+//     audioGenerale.currentTime = 0;
+//   });
+// });
+
+function restart() {
+  audioGenerale.pause();
+  audioPelle.pause();
+  audioCapelli.pause();
+  audioVestito.pause();
+  audioSfondo.pause();
+  audioCielo.pause();
+
+  audioGenerale.currentTime = 0;
+  audioPelle.currentTime = 0;
+  audioCapelli.currentTime = 0;
+  audioVestito.currentTime = 0;
+  audioSfondo.currentTime = 0;
+  audioCielo.currentTime = 0;
+};
 
 function clickPelle() {
   navigator.vibrate(0);
   $("#vibrolino").text("pellino");
   navigator.vibrate([50, 500, 50, 500, 50, 500]);
+
+  restart();
+  currentAudio = audioPelle;
+  currentAudio.play();
+  $("#status").text("Status: Skin Playing");
 }
 
 function clickCapelli() {
   navigator.vibrate(0);
   $("#vibrolino").text("capellino");
   navigator.vibrate([50, 50, 50, 50, 50, 50, 50, 50]);
+
+  restart();
+  currentAudio = audioCapelli;
+  currentAudio.play();
+  $("#status").text("Status: Hair Playing");
 }
 
 function clickVestito() {
   navigator.vibrate(0);
   $("#vibrolino").text("vestitino");
   navigator.vibrate([500, 500, 500, 500, 500, 500]);
+
+  restart();
+  currentAudio = audioVestito;
+  currentAudio.play();
+  $("#status").text("Status: Clothes Playing");
 }
 
 function clickSfondo() {
   navigator.vibrate(0);
   $("#vibrolino").text("sfondino");
   navigator.vibrate([1000, 50, 1000, 50, 1000, 50]);
+
+  restart();
+  currentAudio = audioSfondo;
+  currentAudio.play();
+  $("#status").text("Status: Background Playing");
 }
 
 
@@ -30,6 +123,11 @@ function clickCielo() {
   navigator.vibrate(0);
   $("#vibrolino").text("cielino");
   navigator.vibrate("long");
+
+  restart();
+  currentAudio = audioGenerale;
+  currentAudio.play();
+  $("#status").text("Status: Sky Playing");
 }
 
 $("#pelle").on("click", clickPelle)
