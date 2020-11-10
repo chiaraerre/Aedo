@@ -63,7 +63,7 @@ function restart() {
 
 function startDemo() {
   $("#intro").css("display", "none");
-  $("#intro").css("display", "block");
+  $("#tool").css("display", "block");
   playSound();
   $("#status").text("Intro Playing");
 }
@@ -148,7 +148,7 @@ $("#cielo").on("mouseup", stopVibrating)
 
 function doubleClickPelle() {
   restart();
-  currentAudio = audioPelle;
+  currentAudio = audioIntro;
   playSound();
   $("#status").text("Skin Playing");
 }
