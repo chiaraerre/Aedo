@@ -44,6 +44,7 @@ function restartSound() {
   setTimeout(function() {
     $("#restart").css("background", "#fff");
   }, 200);
+  playSound();
 };
 
 $('#play').click(playSound);
