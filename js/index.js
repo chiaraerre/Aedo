@@ -24,6 +24,7 @@ function playSound() {
     if (currentAudio.currentTime == currentAudio.duration) {
       $("#play").css("background", "#fff");
       $("#pause").css("background", "#999");
+      $("#status").text("Not Playing");
     }
   }, 500);
 };
