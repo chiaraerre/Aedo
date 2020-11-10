@@ -4,9 +4,10 @@ html, body {
 }
 
 #intro {
+  margin: -1vw;
   z-index: 100;
   position: absolute;
-  width: 100vw;
+  width: 101vw;
   height: 100vh;
   background-color: #000;
   opacity: 90%;
