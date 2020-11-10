@@ -39,6 +39,7 @@ function restartSound() {
 function startDemo() {
   $("#intro").css("display", "none");
   playSound();
+  $("#status").text("Intro Playing");
 }
 
   $("#intro").click(startDemo);
