@@ -16,22 +16,22 @@ audioIntro.setAttribute('src', 'audio/intro.mp3');
 
 var currentAudio = audioIntro;
 
-setInterval(function(){
-  if (currentAudio.currentTime !== currentAudio.duration) {
-    $("#pause").css("background", "#fff");
-    $("#play").css("background", "#999");
-  } else {
-    $("#play").css("background", "#fff");
-    $("#pause").css("background", "#999");
-  }
-}, 500);
-
 function playSound() {
   currentAudio.play();
+  $("#play").css("background", "#999");
+  $("#pause").css("background", "#fff");
+  setInterval(function(){
+    if (currentAudio.currentTime == currentAudio.duration) {
+      $("#play").css("background", "#fff");
+      $("#pause").css("background", "#999");
+    }
+  }, 500);
 };
 
 function pauseSound() {
   currentAudio.pause();
+  $("#play").css("background", "#fff");
+  $("#pause").css("background", "#999");
 };
 
 function restartSound() {
@@ -64,6 +64,9 @@ function restart() {
   audioSfondo.currentTime = 0;
   audioCielo.currentTime = 0;
   audioIntro.currentTime = 0;
+
+  $("#play").css("background", "#fff");
+  $("#pause").css("background", "#999");
 };
 
 function startDemo() {
