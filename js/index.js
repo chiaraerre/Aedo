@@ -31,18 +31,10 @@ function pauseSound() {
 function restartSound() {
   currentAudio.currentTime = 0;
   $("#restart").css("background", "#999");
-  setTimeout(function(){
+  setTimeout(function() {
     $("#restart").css("background", "#fff");
-}, 200);
+  }, 200);
 };
-
-function startDemo() {
-  $("#intro").css("display", "none");
-  playSound();
-  $("#status").text("Intro Playing");
-}
-
-  $("#intro").dblclick(startDemo);
 
 $('#play').click(playSound);
 $('#pause').click(pauseSound);
@@ -69,36 +61,56 @@ function restart() {
   $("#pause").css("background", "#999");
 };
 
+function startDemo() {
+  $("#intro").css("display", "none");
+  $("#intro").css("display", "block");
+  playSound();
+  $("#status").text("Intro Playing");
+}
+
+$("#intro").dblclick(startDemo);
+
+
 function clickPelle() {
-  if(currentAudio !== audioPelle) {restart()};
+  if (currentAudio !== audioPelle) {
+    restart()
+  };
   navigator.vibrate(0);
   $("#vibrolino").text("Skin Vibrating");
   navigator.vibrate([50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500]);
 }
 
 function clickCapelli() {
-  if(currentAudio !== audioCapelli) {restart()};
+  if (currentAudio !== audioCapelli) {
+    restart()
+  };
   navigator.vibrate(0);
   $("#vibrolino").text("Hair Vibrating");
   navigator.vibrate([50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]);
 }
 
 function clickVestito() {
-  if(currentAudio !== audioVestito) {restart()};
+  if (currentAudio !== audioVestito) {
+    restart()
+  };
   navigator.vibrate(0);
   $("#vibrolino").text("Clothes Vibrating");
   navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100]);
 }
 
 function clickSfondo() {
-  if(currentAudio !== audioSfondo) {restart()};
+  if (currentAudio !== audioSfondo) {
+    restart()
+  };
   navigator.vibrate(0);
   $("#vibrolino").text("Background Vibrating");
   navigator.vibrate([1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50]);
 }
 
 function clickCielo() {
-  if(currentAudio !== audioCielo) {restart()};
+  if (currentAudio !== audioCielo) {
+    restart()
+  };
   navigator.vibrate(0);
   $("#vibrolino").text("Not Vibrating");
   navigator.vibrate("long");
