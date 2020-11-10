@@ -15,11 +15,13 @@ audioCielo.setAttribute('src', 'audio/smile.mp3');
 audioIntro.setAttribute('src', 'audio/intro.mp3');
 
 var currentAudio = audioIntro;
+var currentAudioName = "Intro";
 
 function playSound() {
   currentAudio.play();
   $("#play").css("background", "#999");
   $("#pause").css("background", "#fff");
+  $("#status").text(currentAudioName + " Playing");
   setInterval(function(){
     if (currentAudio.currentTime == currentAudio.duration) {
       $("#play").css("background", "#fff");
@@ -33,6 +35,7 @@ function pauseSound() {
   currentAudio.pause();
   $("#play").css("background", "#fff");
   $("#pause").css("background", "#999");
+  $("#status").text(currentAudioName + " Paused");
 };
 
 function restartSound() {
@@ -50,13 +53,7 @@ $('#restart').click(restartSound);
 function restart() {
   $("#status").text("Not Playing");
 
-  audioGenerale.pause();
-  audioPelle.pause();
-  audioCapelli.pause();
-  audioVestito.pause();
-  audioSfondo.pause();
-  audioCielo.pause();
-  audioIntro.pause();
+  currentAudio.pause();
 
   audioGenerale.currentTime = 0;
   audioPelle.currentTime = 0;
@@ -74,52 +71,35 @@ function startDemo() {
   $("#intro").css("display", "none");
   $("#tool").css("display", "block");
   playSound();
-  $("#status").text("Intro Playing");
 }
 
 $("#intro").click(startDemo);
 
-
 function clickPelle() {
-  // if (currentAudio !== audioPelle) {
-  //   restart()
-  // };
   navigator.vibrate(0);
   $("#vibrolino").text("Skin Vibrating");
   navigator.vibrate([50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500]);
 }
 
 function clickCapelli() {
-  // if (currentAudio !== audioCapelli) {
-  //   restart()
-  // };
   navigator.vibrate(0);
   $("#vibrolino").text("Hair Vibrating");
   navigator.vibrate([50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]);
 }
 
 function clickVestito() {
-  // if (currentAudio !== audioVestito) {
-  //   restart()
-  // };
   navigator.vibrate(0);
   $("#vibrolino").text("Clothes Vibrating");
   navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100]);
 }
 
 function clickSfondo() {
-  // if (currentAudio !== audioSfondo) {
-  //   restart()
-  // };
   navigator.vibrate(0);
   $("#vibrolino").text("Background Vibrating");
   navigator.vibrate([1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50]);
 }
 
 function clickCielo() {
-  // if (currentAudio !== audioCielo) {
-  //   restart()
-  // };
   navigator.vibrate(0);
   $("#vibrolino").text("Not Vibrating");
   navigator.vibrate("long");
@@ -158,36 +138,36 @@ $("#cielo").on("mouseup", stopVibrating)
 function doubleClickPelle() {
   restart();
   currentAudio = audioPelle;
+  currentAudioName = "Skin";
   playSound();
-  $("#status").text("Skin Playing");
 }
 
 function doubleClickCapelli() {
   restart();
   currentAudio = audioCapelli;
+  currentAudioName = "Hair";
   playSound();
-  $("#status").text("Hair Playing");
 }
 
 function doubleClickVestito() {
   restart();
   currentAudio = audioVestito;
+  currentAudioName = "Clothes";
   playSound();
-  $("#status").text("Clothes Playing");
 }
 
 function doubleClickSfondo() {
   restart();
   currentAudio = audioSfondo;
+  currentAudioName = "Background";
   playSound();
-  $("#status").text("Background Playing");
 }
 
 function doubleClickCielo() {
   restart();
   currentAudio = audioGenerale;
+  currentAudioName = "Sky";
   playSound();
-  $("#status").text("Sky Playing");
 }
 
 $("#pelle").on("dblclick", doubleClickPelle)
