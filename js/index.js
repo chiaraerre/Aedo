@@ -12,7 +12,7 @@ audioCapelli.setAttribute('src', 'audio/capelli.mp3');
 audioVestito.setAttribute('src', 'audio/vestito.mp3');
 audioSfondo.setAttribute('src', 'audio/sfondo.mp3');
 audioCielo.setAttribute('src', 'audio/smile.mp3');
-audioIntro.setAttribute('src', 'audio/introduction.mp3');
+audioIntro.setAttribute('src', 'audio/introduction2.mp3');
 
 var currentAudio = audioIntro;
 
@@ -148,7 +148,7 @@ $("#cielo").on("mouseup", stopVibrating)
 
 function doubleClickPelle() {
   restart();
-  currentAudio = audioIntro;
+  currentAudio = audioPelle;
   playSound();
   $("#status").text("Skin Playing");
 }
