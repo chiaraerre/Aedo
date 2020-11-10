@@ -49,6 +49,7 @@ function restart() {
   audioVestito.pause();
   audioSfondo.pause();
   audioCielo.pause();
+  audioIntro.pause();
 
   audioGenerale.currentTime = 0;
   audioPelle.currentTime = 0;
@@ -56,6 +57,7 @@ function restart() {
   audioVestito.currentTime = 0;
   audioSfondo.currentTime = 0;
   audioCielo.currentTime = 0;
+  audioIntro.currentTime = 0;
 
   $("#play").css("background", "#fff");
   $("#pause").css("background", "#999");
