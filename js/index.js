@@ -42,7 +42,7 @@ function startDemo() {
   $("#status").text("Intro Playing");
 }
 
-  $("#intro").click(startDemo);
+  $("#intro").dblclick(startDemo);
 
 $('#play').click(playSound);
 $('#pause').click(pauseSound);
