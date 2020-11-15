@@ -22,7 +22,7 @@ function playSound() {
   $("#play").css("background", "#999");
   $("#pause").css("background", "#fff");
   $("#status").text(currentAudioName + " Playing");
-  setInterval(function(){
+  setInterval(function() {
     if (currentAudio.currentTime == currentAudio.duration) {
       $("#play").css("background", "#fff");
       $("#pause").css("background", "#999");
@@ -123,17 +123,17 @@ function stopVibrating() {
   navigator.vibrate(0);
 }
 
-$("#pelle").on("touchstart", clickPelle)
-$("#capelli").on("touchstart", clickCapelli)
-$("#vestito").on("touchstart", clickVestito)
-$("#sfondo").on("touchstart", clickSfondo)
-$("#cielo").on("touchstart", clickCielo)
-
-$("#pelle").on("touchend", stopVibrating)
-$("#capelli").on("touchend", stopVibrating)
-$("#vestito").on("touchend", stopVibrating)
-$("#sfondo").on("touchend", stopVibrating)
-$("#cielo").on("touchend", stopVibrating)
+// $("#pelle").on("touchstart", clickPelle)
+// $("#capelli").on("touchstart", clickCapelli)
+// $("#vestito").on("touchstart", clickVestito)
+// $("#sfondo").on("touchstart", clickSfondo)
+// $("#cielo").on("touchstart", clickCielo)
+//
+// $("#pelle").on("touchend", stopVibrating)
+// $("#capelli").on("touchend", stopVibrating)
+// $("#vestito").on("touchend", stopVibrating)
+// $("#sfondo").on("touchend", stopVibrating)
+// $("#cielo").on("touchend", stopVibrating)
 
 // $("#pelle").on("mousedown", clickPelle)
 // $("#capelli").on("mousedown", clickCapelli)
@@ -189,22 +189,36 @@ $("#vestito").on("dblclick", doubleClickVestito)
 $("#sfondo").on("dblclick", doubleClickSfondo)
 $("#cielo").on("dblclick", doubleClickCielo)
 
-$("svg").on("touchmove", function(e) {
-            // get the touch element
-            var touch = e.touches[0];
+// $(document).bind('touchstart', function(event) {
+//     console.log(event.originalEvent.touches);
+// });
 
-            // get the DOM element
-            var currentArea = document.elementFromPoint(touch.clientX, touch.clientY);
+$("svg").on("touchmove", function(event) {
+  // get the touch element
+  var touch = event.originalEvent.touches[0];
 
-            // make sure an element was found - some areas on the page may have no elements
-            if (currentArea) {
-                // interact with the DOM element
-                // currentArea.addClass(attivo) = !currentArea.addClass(attivo);
-                alert(currentArea)
-            }
-  });
+  // get the DOM element
+  var currentArea = document.elementFromPoint(touch.clientX, touch.clientY);
 
-// $("svg").on("touchmove", function() {
-//   $("#instructions").css("background", "#ff0000");
-//
-//   });
+  // make sure an element was found - some areas on the page may have no elements
+  // if (currentArea) {
+  // interact with the DOM element
+  // currentArea.addClass(attivo) = !currentArea.addClass(attivo);
+   console.log(currentArea.classList)
+  if (currentArea.classList.contains("cielo")) {
+    clickCielo()
+  }
+  if (currentArea.classList.contains("sfondo")) {
+    clickSfondo()
+  }
+  if (currentArea.classList.contains("vestito")) {
+    clickVestito()
+  }
+  if (currentArea.classList.contains("capelli")) {
+    clickCapelli()
+  }
+  if (currentArea.classList.contains("pelle")) {
+    clickPelle()
+  }
+  // }
+});
