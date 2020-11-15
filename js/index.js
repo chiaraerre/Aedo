@@ -6,31 +6,6 @@ var audioSfondo = document.createElement('audio');
 var audioCielo = document.createElement('audio');
 var audioIntro = document.createElement('audio');
 
-
-var isTouch = ('ontouchstart' in window) || ('DocumentTouch' in window && document instanceof DocumentTouch);
-var downE = isTouch? 'touchstart' :'mousedown';
-var moveE = isTouch? 'touchmove' :'mousemove';
-var upE = isTouch? 'touchend' :'mouseup';
-
-window.addEventListener(downE, startTest )
-function startTest (evt) {
-    setTimeout(function  () {
-
-        var svg=document.querySelector('svg');
-        var r = svg.createSVGRect();
-        r.x = 20;
-        r.y = 20;
-        r.width = r.height = 44;
-        var getIntersectionList = svg.getIntersectionList(r, null );
-        var checkIntersection = svg.checkIntersection( document.querySelector('#r2'), r );
-        var elementFromPoint = document.elementFromPoint(20,20);
-        alert("getIntersectionList: "+getIntersectionList);
-        alert("checkIntersection: "+checkIntersection);
-        alert("elementFromPoint: "+elementFromPoint);
-
-    },1000);
-  }
-
 audioGenerale.setAttribute('src', 'audio/generale.mp3');
 audioPelle.setAttribute('src', 'audio/pelle.mp3');
 audioCapelli.setAttribute('src', 'audio/capelli.mp3');
