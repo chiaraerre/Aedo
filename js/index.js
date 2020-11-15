@@ -135,17 +135,17 @@ $("#vestito").on("touchend", stopVibrating)
 $("#sfondo").on("touchend", stopVibrating)
 $("#cielo").on("touchend", stopVibrating)
 
-$("#pelle").on("mousedown", clickPelle)
-$("#capelli").on("mousedown", clickCapelli)
-$("#vestito").on("mousedown", clickVestito)
-$("#sfondo").on("mousedown", clickSfondo)
-$("#cielo").on("mousedown", clickCielo)
-
-$("#pelle").on("mouseup", stopVibrating)
-$("#capelli").on("mouseup", stopVibrating)
-$("#vestito").on("mouseup", stopVibrating)
-$("#sfondo").on("mouseup", stopVibrating)
-$("#cielo").on("mouseup", stopVibrating)
+// $("#pelle").on("mousedown", clickPelle)
+// $("#capelli").on("mousedown", clickCapelli)
+// $("#vestito").on("mousedown", clickVestito)
+// $("#sfondo").on("mousedown", clickSfondo)
+// $("#cielo").on("mousedown", clickCielo)
+//
+// $("#pelle").on("mouseup", stopVibrating)
+// $("#capelli").on("mouseup", stopVibrating)
+// $("#vestito").on("mouseup", stopVibrating)
+// $("#sfondo").on("mouseup", stopVibrating)
+// $("#cielo").on("mouseup", stopVibrating)
 
 
 function doubleClickPelle() {
@@ -188,3 +188,23 @@ $("#capelli").on("dblclick", doubleClickCapelli)
 $("#vestito").on("dblclick", doubleClickVestito)
 $("#sfondo").on("dblclick", doubleClickSfondo)
 $("#cielo").on("dblclick", doubleClickCielo)
+
+$("svg").on("touchmove", function(e) {
+            // get the touch element
+            var touch = e.touches[0];
+
+            // get the DOM element
+            var currentArea = document.elementFromPoint(touch.clientX, touch.clientY);
+
+            // make sure an element was found - some areas on the page may have no elements
+            if (currentArea) {
+                // interact with the DOM element
+                // currentArea.addClass(attivo) = !currentArea.addClass(attivo);
+                alert(currentArea)
+            }
+  });
+
+// $("svg").on("touchmove", function() {
+//   $("#instructions").css("background", "#ff0000");
+//
+//   });

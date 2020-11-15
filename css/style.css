@@ -9,9 +9,10 @@ html, body {
   user-select: none;
 }
 
-.image:hover {
-  fill:#ff0000 !important;
+path.attivo {
+  fill: black !important;
 }
+
 
 #intro {
   margin: -2vw;
