@@ -123,19 +123,19 @@ function stopVibrating() {
   navigator.vibrate(0);
 }
 
-$("#pelle").on("pointerout", stopVibrating)
-$("#capelli").on("pointerout", stopVibrating)
-$("#vestito").on("pointerout", stopVibrating)
-$("#sfondo").on("pointerout", stopVibrating)
-$("#cielo").on("pointerout", stopVibrating)
+// $("#pelle").on("pointerout", stopVibrating)
+// $("#capelli").on("pointerout", stopVibrating)
+// $("#vestito").on("pointerout", stopVibrating)
+// $("#sfondo").on("pointerout", stopVibrating)
+// $("#cielo").on("pointerout", stopVibrating)
 
-$("#pelle").on("pointerover", clickPelle)
-$("#capelli").on("pointerover", clickCapelli)
-$("#vestito").on("pointerover", clickVestito)
-$("#sfondo").on("pointerover", clickSfondo)
-$("#cielo").on("pointerover", clickCielo)
+$("#pelle").on("pointerover", stopVibrating clickPelle)
+$("#capelli").on("pointerover", stopVibrating clickCapelli)
+$("#vestito").on("pointerover", stopVibrating clickVestito)
+$("#sfondo").on("pointerover", stopVibrating clickSfondo)
+$("#cielo").on("pointerover", stopVibrating clickCielo)
 
-// $("#pelle").on("touchend", stopVibrating)
+$("body").on("touchend", stopVibrating)
 // $("#capelli").on("touchend", stopVibrating)
 // $("#vestito").on("touchend", stopVibrating)
 // $("#sfondo").on("touchend", stopVibrating)
