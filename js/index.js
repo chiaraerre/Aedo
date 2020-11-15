@@ -193,6 +193,8 @@ $("#cielo").on("dblclick", doubleClickCielo)
 //     console.log(event.originalEvent.touches);
 // });
 
+var vibrating;
+
 $("svg").on("touchmove", function(event) {
   // get the touch element
   var touch = event.originalEvent.touches[0];
@@ -204,21 +206,33 @@ $("svg").on("touchmove", function(event) {
   // if (currentArea) {
   // interact with the DOM element
   // currentArea.addClass(attivo) = !currentArea.addClass(attivo);
-   console.log(currentArea.classList)
+   console.log(vibrating)
   if (currentArea.classList.contains("cielo")) {
-    clickCielo()
+    if(vibrating != "cielo") {vibrating = "cielo"}
   }
-  if (currentArea.classList.contains("sfondo")) {
-    clickSfondo()
+  else if (currentArea.classList.contains("sfondo")) {
+    if(vibrating != "sfondo") {vibrating = "sfondo"}
   }
-  if (currentArea.classList.contains("vestito")) {
-    clickVestito()
+  else if (currentArea.classList.contains("vestito")) {
+    if(vibrating != "vestito") {vibrating = "vestito"}
   }
-  if (currentArea.classList.contains("capelli")) {
-    clickCapelli()
+  else if (currentArea.classList.contains("capelli")) {
+    if(vibrating != "capelli") {vibrating = "capelli"}
   }
-  if (currentArea.classList.contains("pelle")) {
-    clickPelle()
+  else if (currentArea.classList.contains("pelle")) {
+    if(vibrating != "pelle") {vibrating = "pelle"}
   }
   // }
+
+  if(vibrating == "cielo") {clickCielo()}
+  if(vibrating == "sfondo") {clickSfondo()}
+  if(vibrating == "vestito") {clickVestito()}
+  if(vibrating == "capelli") {clickCapelli()}
+  if(vibrating == "pelle") {clickPelle()}
+});
+
+
+
+$("svg").on("touchend", function() {
+  stopVibrating()
 });
