@@ -141,17 +141,17 @@ $("#cielo").on("pointerout", stopVibrating)
 // $("#sfondo").on("touchend", stopVibrating)
 // $("#cielo").on("touchend", stopVibrating)
 
-$("#pelle").on("mousedown", clickPelle)
-$("#capelli").on("mousedown", clickCapelli)
-$("#vestito").on("mousedown", clickVestito)
-$("#sfondo").on("mousedown", clickSfondo)
-$("#cielo").on("mousedown", clickCielo)
-
-$("#pelle").on("mouseup", stopVibrating)
-$("#capelli").on("mouseup", stopVibrating)
-$("#vestito").on("mouseup", stopVibrating)
-$("#sfondo").on("mouseup", stopVibrating)
-$("#cielo").on("mouseup", stopVibrating)
+// $("#pelle").on("mousedown", clickPelle)
+// $("#capelli").on("mousedown", clickCapelli)
+// $("#vestito").on("mousedown", clickVestito)
+// $("#sfondo").on("mousedown", clickSfondo)
+// $("#cielo").on("mousedown", clickCielo)
+//
+// $("#pelle").on("mouseup", stopVibrating)
+// $("#capelli").on("mouseup", stopVibrating)
+// $("#vestito").on("mouseup", stopVibrating)
+// $("#sfondo").on("mouseup", stopVibrating)
+// $("#cielo").on("mouseup", stopVibrating)
 
 
 function doubleClickPelle() {
