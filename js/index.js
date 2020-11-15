@@ -124,19 +124,19 @@ function stopVibrating() {
 }
 
 $("#pelle").on("pointerover", clickPelle)
-$("#pelle").on("pointerout", stopVibrating)
+// $("#pelle").on("pointerout", stopVibrating)
 
 $("#capelli").on("pointerover", clickCapelli)
-$("#capelli").on("pointerout", stopVibrating)
+// $("#capelli").on("pointerout", stopVibrating)
 
 $("#vestito").on("pointerover", clickVestito)
-$("#vestito").on("pointerout", stopVibrating)
+// $("#vestito").on("pointerout", stopVibrating)
 
 $("#sfondo").on("pointerover", clickSfondo)
-$("#sfondo").on("pointerout", stopVibrating)
+// $("#sfondo").on("pointerout", stopVibrating)
 
 $("#cielo").on("pointerover", clickCielo)
-$("#cielo").on("pointerout", stopVibrating)
+// $("#cielo").on("pointerout", stopVibrating)
 
 // $("#pelle").on("touchend", stopVibrating)
 // $("#capelli").on("touchend", stopVibrating)
