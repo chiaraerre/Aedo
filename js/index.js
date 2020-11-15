@@ -206,29 +206,43 @@ $("svg").on("touchmove", function(event) {
   // if (currentArea) {
   // interact with the DOM element
   // currentArea.addClass(attivo) = !currentArea.addClass(attivo);
-   console.log(vibrating)
+  console.log(vibrating)
   if (currentArea.classList.contains("cielo")) {
-    if(vibrating != "cielo") {vibrating = "cielo"}
-  }
-  else if (currentArea.classList.contains("sfondo")) {
-    if(vibrating != "sfondo") {vibrating = "sfondo"}
-  }
-  else if (currentArea.classList.contains("vestito")) {
-    if(vibrating != "vestito") {vibrating = "vestito"}
-  }
-  else if (currentArea.classList.contains("capelli")) {
-    if(vibrating != "capelli") {vibrating = "capelli"}
-  }
-  else if (currentArea.classList.contains("pelle")) {
-    if(vibrating != "pelle") {vibrating = "pelle"}
+    if (vibrating != "cielo") {
+      vibrating = "cielo"
+      navigator.vibrate(0);
+      $("#vibrolino").text("Not Vibrating");
+    }
+  } else if (currentArea.classList.contains("sfondo")) {
+    if (vibrating != "sfondo") {
+      vibrating = "sfondo"
+      navigator.vibrate(0);
+      $("#vibrolino").text("Background Vibrating");
+      navigator.vibrate([1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50, 1000, 50]);
+    }
+  } else if (currentArea.classList.contains("vestito")) {
+    if (vibrating != "vestito") {
+      vibrating = "vestito"
+      navigator.vibrate(0);
+      $("#vibrolino").text("Clothes Vibrating");
+      navigator.vibrate([200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100, 200, 100]);
+    }
+  } else if (currentArea.classList.contains("capelli")) {
+    if (vibrating != "capelli") {
+      vibrating = "capelli";
+      navigator.vibrate(0);
+      $("#vibrolino").text("Hair Vibrating");
+      navigator.vibrate([50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50]);
+    }
+  } else if (currentArea.classList.contains("pelle")) {
+    if (vibrating != "pelle") {
+      vibrating = "pelle";
+      navigator.vibrate(0);
+      $("#vibrolino").text("Skin Vibrating");
+      navigator.vibrate([50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500, 50, 500]);
+    }
   }
   // }
-
-  if(vibrating == "cielo") {clickCielo()}
-  if(vibrating == "sfondo") {clickSfondo()}
-  if(vibrating == "vestito") {clickVestito()}
-  if(vibrating == "capelli") {clickCapelli()}
-  if(vibrating == "pelle") {clickPelle()}
 });
 
 
