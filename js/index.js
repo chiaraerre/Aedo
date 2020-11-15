@@ -129,11 +129,11 @@ function stopVibrating() {
 // $("#sfondo").on("pointerout", stopVibrating)
 // $("#cielo").on("pointerout", stopVibrating)
 
-$("#pelle").on("pointerover", stopVibrating clickPelle)
-$("#capelli").on("pointerover", stopVibrating clickCapelli)
-$("#vestito").on("pointerover", stopVibrating clickVestito)
-$("#sfondo").on("pointerover", stopVibrating clickSfondo)
-$("#cielo").on("pointerover", stopVibrating clickCielo)
+$("#pelle").on("pointerover", stopVibrating, clickPelle)
+$("#capelli").on("pointerover", stopVibrating, clickCapelli)
+$("#vestito").on("pointerover", stopVibrating, clickVestito)
+$("#sfondo").on("pointerover", stopVibrating, clickSfondo)
+$("#cielo").on("pointerover", stopVibrating, clickCielo)
 
 $("body").on("touchend", stopVibrating)
 // $("#capelli").on("touchend", stopVibrating)
