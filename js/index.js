@@ -1,27 +1,3 @@
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
-
-// Create circle
-const circle = new Path2D();
-circle.arc(150, 75, 50, 0, 2 * Math.PI);
-ctx.fillStyle = 'red';
-ctx.fill(circle);
-
-// Listen for mouse moves
-canvas.addEventListener('touchmove', function(event) {
-  // Check whether point is inside circle
-  if (ctx.isPointInPath(circle, event.offsetX, event.offsetY)) {
-    ctx.fillStyle = 'green';
-  }
-  else {
-    ctx.fillStyle = 'red';
-  }
-
-  // Draw circle
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.fill(circle);
-});
-
 var audioGenerale = document.createElement('audio');
 var audioPelle = document.createElement('audio');
 var audioCapelli = document.createElement('audio');
@@ -29,6 +5,31 @@ var audioVestito = document.createElement('audio');
 var audioSfondo = document.createElement('audio');
 var audioCielo = document.createElement('audio');
 var audioIntro = document.createElement('audio');
+
+
+var isTouch = ('ontouchstart' in window) || ('DocumentTouch' in window && document instanceof DocumentTouch);
+var downE = isTouch? 'touchstart' :'mousedown';
+var moveE = isTouch? 'touchmove' :'mousemove';
+var upE = isTouch? 'touchend' :'mouseup';
+
+window.addEventListener(downE, startTest )
+function startTest (evt) {
+    setTimeout(function  () {
+
+        var svg=document.querySelector('svg');
+        var r = svg.createSVGRect();
+        r.x = 20;
+        r.y = 20;
+        r.width = r.height = 44;
+        var getIntersectionList = svg.getIntersectionList(r, null );
+        var checkIntersection = svg.checkIntersection( document.querySelector('#r2'), r );
+        var elementFromPoint = document.elementFromPoint(20,20);
+        alert("getIntersectionList: "+getIntersectionList);
+        alert("checkIntersection: "+checkIntersection);
+        alert("elementFromPoint: "+elementFromPoint);
+
+    },1000);
+  }
 
 audioGenerale.setAttribute('src', 'audio/generale.mp3');
 audioPelle.setAttribute('src', 'audio/pelle.mp3');
@@ -171,11 +172,6 @@ $("#vestito").on("mouseup", stopVibrating)
 $("#sfondo").on("mouseup", stopVibrating)
 $("#cielo").on("mouseup", stopVibrating)
 
-let point = svg.createSVGPoint()
-point.x = mousex;
-point.y = 300;
-//checking if the point is in the path c
-console.log(c.isPointInFill(point));
 
 function doubleClickPelle() {
   restart();
