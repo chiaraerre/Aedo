@@ -123,17 +123,20 @@ function stopVibrating() {
   navigator.vibrate(0);
 }
 
-$("#pelle").on("pointerover", clickPelle)
-$("#capelli").on("pointerover", clickCapelli)
-$("#vestito").on("pointerover", clickVestito)
-$("#sfondo").on("pointerover", clickSfondo)
-$("#cielo").on("pointerover", clickCielo)
+$("#pelle").on("pointerenter", clickPelle)
+$("#pelle").on("pointerleave", stopVibrating)
 
-$("#pelle").on("pointerout", stopVibrating)
-$("#capelli").on("pointerout", stopVibrating)
-$("#vestito").on("pointerout", stopVibrating)
-$("#sfondo").on("pointerout", stopVibrating)
-$("#cielo").on("pointerout", stopVibrating)
+$("#capelli").on("pointerenter", clickCapelli)
+$("#capelli").on("pointerleave", stopVibrating)
+
+$("#vestito").on("pointerenter", clickVestito)
+$("#vestito").on("pointerleave", stopVibrating)
+
+$("#sfondo").on("pointerenter", clickSfondo)
+$("#sfondo").on("pointerleave", stopVibrating)
+
+$("#cielo").on("pointerenter", clickCielo)
+$("#cielo").on("pointerleave", stopVibrating)
 
 // $("#pelle").on("touchend", stopVibrating)
 // $("#capelli").on("touchend", stopVibrating)
