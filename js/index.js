@@ -123,38 +123,29 @@ function stopVibrating() {
   navigator.vibrate(0);
 }
 
-$("#pelle").on("pointerover", clickPelle)
-// $("#pelle").on("pointerout", stopVibrating)
+$("#pelle").on("touchstart", clickPelle)
+$("#capelli").on("touchstart", clickCapelli)
+$("#vestito").on("touchstart", clickVestito)
+$("#sfondo").on("touchstart", clickSfondo)
+$("#cielo").on("touchstart", clickCielo)
 
-$("#capelli").on("pointerover", clickCapelli)
-// $("#capelli").on("pointerout", stopVibrating)
+$("#pelle").on("touchend", stopVibrating)
+$("#capelli").on("touchend", stopVibrating)
+$("#vestito").on("touchend", stopVibrating)
+$("#sfondo").on("touchend", stopVibrating)
+$("#cielo").on("touchend", stopVibrating)
 
-$("#vestito").on("pointerover", clickVestito)
-// $("#vestito").on("pointerout", stopVibrating)
+$("#pelle").on("mousedown", clickPelle)
+$("#capelli").on("mousedown", clickCapelli)
+$("#vestito").on("mousedown", clickVestito)
+$("#sfondo").on("mousedown", clickSfondo)
+$("#cielo").on("mousedown", clickCielo)
 
-$("#sfondo").on("pointerover", clickSfondo)
-// $("#sfondo").on("pointerout", stopVibrating)
-
-$("#cielo").on("pointerover", clickCielo)
-// $("#cielo").on("pointerout", stopVibrating)
-
-// $("#pelle").on("touchend", stopVibrating)
-// $("#capelli").on("touchend", stopVibrating)
-// $("#vestito").on("touchend", stopVibrating)
-// $("#sfondo").on("touchend", stopVibrating)
-// $("#cielo").on("touchend", stopVibrating)
-
-// $("#pelle").on("mousedown", clickPelle)
-// $("#capelli").on("mousedown", clickCapelli)
-// $("#vestito").on("mousedown", clickVestito)
-// $("#sfondo").on("mousedown", clickSfondo)
-// $("#cielo").on("mousedown", clickCielo)
-//
-// $("#pelle").on("mouseup", stopVibrating)
-// $("#capelli").on("mouseup", stopVibrating)
-// $("#vestito").on("mouseup", stopVibrating)
-// $("#sfondo").on("mouseup", stopVibrating)
-// $("#cielo").on("mouseup", stopVibrating)
+$("#pelle").on("mouseup", stopVibrating)
+$("#capelli").on("mouseup", stopVibrating)
+$("#vestito").on("mouseup", stopVibrating)
+$("#sfondo").on("mouseup", stopVibrating)
+$("#cielo").on("mouseup", stopVibrating)
 
 
 function doubleClickPelle() {
