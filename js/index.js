@@ -47,9 +47,21 @@ function restartSound() {
   playSound();
 };
 
+function playInfo() {
+  restart();
+  currentAudio = audioIntro;
+  currentAudioName = "Intro";
+  $("#instructions").css("background", "#999");
+  setTimeout(function() {
+    $("#instructions").css("background", "#fff");
+  }, 200);
+  playSound();
+}
+
 $('#play').click(playSound);
 $('#pause').click(pauseSound);
 $('#restart').click(restartSound);
+$('#instructions').click(playInfo);
 
 function restart() {
   $("#status").text("Not Playing");
@@ -111,17 +123,23 @@ function stopVibrating() {
   navigator.vibrate(0);
 }
 
-$("#pelle").on("touchstart", clickPelle)
-$("#capelli").on("touchstart", clickCapelli)
-$("#vestito").on("touchstart", clickVestito)
-$("#sfondo").on("touchstart", clickSfondo)
-$("#cielo").on("touchstart", clickCielo)
+$("#pelle").on("pointerover", clickPelle)
+$("#capelli").on("pointerover", clickCapelli)
+$("#vestito").on("pointerover", clickVestito)
+$("#sfondo").on("pointerover", clickSfondo)
+$("#cielo").on("pointerover", clickCielo)
 
-$("#pelle").on("touchend", stopVibrating)
-$("#capelli").on("touchend", stopVibrating)
-$("#vestito").on("touchend", stopVibrating)
-$("#sfondo").on("touchend", stopVibrating)
-$("#cielo").on("touchend", stopVibrating)
+$("#pelle").on("pointerout", stopVibrating)
+$("#capelli").on("pointerout", stopVibrating)
+$("#vestito").on("pointerout", stopVibrating)
+$("#sfondo").on("pointerout", stopVibrating)
+$("#cielo").on("pointerout", stopVibrating)
+
+// $("#pelle").on("touchend", stopVibrating)
+// $("#capelli").on("touchend", stopVibrating)
+// $("#vestito").on("touchend", stopVibrating)
+// $("#sfondo").on("touchend", stopVibrating)
+// $("#cielo").on("touchend", stopVibrating)
 
 $("#pelle").on("mousedown", clickPelle)
 $("#capelli").on("mousedown", clickCapelli)

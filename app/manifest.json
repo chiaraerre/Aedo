@@ -3,7 +3,7 @@
   "short_name": "Aedo",
   "display": "fullscreen",
   "background_color": "#fff",
-  "theme_color": "#ffff00",
+  "theme_color": "#fff",
   "description": "Enhance blind people's experience in cultural places",
   "icons": [{
       "src": "\/android-icon-36x36.png",

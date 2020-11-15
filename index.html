@@ -36,6 +36,10 @@
     <P id="start">START DEMO</P>
   </div>
 
+  <div id="info">
+    <p id="status">Not Playing</p> / <p id="vibrolino">Not Vibrating</p>
+  </div>
+
   <!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In  -->
   <div id="tool" style="display:none;">
     <div style="text-align:center">
@@ -139,10 +143,6 @@
       </svg>
     </div>
 
-    <div id="info">
-      <p id="status">Not Playing</p> / <p id="vibrolino">Not Vibrating</p>
-    </div>
-
     <div id="controls" style="text-align:center">
       <div class="button" id="play">
         <img class="icon" src="icons/play-solid.svg">
@@ -153,6 +153,10 @@
       <div class="button" id="restart">
         <img class="icon" src="icons/redo-alt-solid.svg">
       </div>
+      <div style="width:4vh; display:inline-block"></div>
+      <div class="button" id="instructions">
+        <img class="icon" src="icons/info-solid.svg">
+      </div>
     </div>
 
   </div>
@@ -162,6 +166,7 @@
   <script src="js/index.js"></script>
   <script src="js/jquery.vibrate.js-master/build/jquery/jquery.vibrate.js"></script>
   <script src="js/jquery.vibrate.js-master/build/jquery/jquery.vibrate.min.js"></script>
+  <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
 
 </body>
 
