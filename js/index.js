@@ -149,11 +149,11 @@ function stopVibrating() {
   navigator.vibrate(0);
 }
 
-// $("#pelle").on("touchstart", clickPelle)
-// $("#capelli").on("touchstart", clickCapelli)
-// $("#vestito").on("touchstart", clickVestito)
-// $("#sfondo").on("touchstart", clickSfondo)
-// $("#cielo").on("touchstart", clickCielo)
+$("#pelle").on("touchstart", clickPelle)
+$("#capelli").on("touchstart", clickCapelli)
+$("#vestito").on("touchstart", clickVestito)
+$("#sfondo").on("touchstart", clickSfondo)
+$("#cielo").on("touchstart", clickCielo)
 //
 // $("#pelle").on("touchend", stopVibrating)
 // $("#capelli").on("touchend", stopVibrating)
