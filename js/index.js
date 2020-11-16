@@ -94,16 +94,23 @@ function startDemo() {
   playSound();
   $("#start").css("display", "none");
   $("lottie-player").css("display", "block");
+  $("#skip").css("display", "block");
   setTimeout(function() {
-    currentAudio = audioIstruzioni;
-    playSound();
-    $("body").css("background-color", "white");
-    $("#intro").css("display", "none");
-    $("#tool").css("display", "block");
-  }, 57000);
+    startTool();
+  }, 59000);
+}
+
+function startTool() {
+  restart();
+  currentAudio = audioIstruzioni;
+  playSound();
+  $("body").css("background-color", "white");
+  $("#intro").css("display", "none");
+  $("#tool").css("display", "block");
 }
 
 $("#intro").click(startDemo);
+$("#skip").click(startTool);
 
 
 
