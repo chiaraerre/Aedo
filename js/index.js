@@ -149,7 +149,8 @@ function stopVibrating() {
   navigator.vibrate(0);
 }
 
-$("#pelle").on("touchstart", clickPelle)
+$("#mani").on("touchstart", clickPelle)
+$("#faccia").on("touchstart", clickPelle)
 $("#capelli").on("touchstart", clickCapelli)
 $("#vestito").on("touchstart", clickVestito)
 $("#sfondo").on("touchstart", clickSfondo)
