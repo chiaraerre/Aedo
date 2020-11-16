@@ -95,9 +95,14 @@ function startDemo() {
   $("#start").css("display", "none");
   $("lottie-player").css("display", "block");
   $("#skip").css("display", "block");
-  setTimeout(function() {
-    startTool();
-  }, 59000);
+  // setTimeout(function() {
+  //   startTool();
+  // }, 59000);
+  setInterval(function() {
+    if (audioGenerale.currentTime == audioGenerale.duration) {
+      startTool()
+    }
+  }, 2000);
 }
 
 function startTool() {
