@@ -1,3 +1,17 @@
+@font-face {
+  font-family: cambonItalic;
+  src: url(../font/Cambon-Italic.otf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: cambonRegular;
+  src: url(../font/Cambon-Regular.otf);
+  font-weight: bold;
+  font-style: italic;
+}
+
 html, body {
   overflow: hidden;
   height: 100%;
@@ -13,19 +27,21 @@ path.attivo {
   fill: black !important;
 }
 
-
+.dark {
+  background-color: #222;
+}
 #intro {
-  margin: -2vw;
+  font-family: CambonItalic;
   z-index: 100;
   position: absolute;
-  width: 102vw;
+  width: 100vw;
   height: 100vh;
-  background-color: #000;
   opacity: 90%;
   text-align: center;
   color: white;
-  font-size: 1.5em;
+  font-size: 2em;
   padding: 40vh 0;
+  text-decoration: underline;
 }
 
 #info {
@@ -34,6 +50,7 @@ path.attivo {
   top: 15px;
   color: #666;
   font-size: 0.8em;
+  font-family: CambonRegular;
 }
 
 p {

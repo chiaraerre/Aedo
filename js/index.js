@@ -1,21 +1,25 @@
 var audioGenerale = document.createElement('audio');
-var audioPelle = document.createElement('audio');
+var audioMani = document.createElement('audio');
+var audioFaccia = document.createElement('audio');
 var audioCapelli = document.createElement('audio');
 var audioVestito = document.createElement('audio');
 var audioSfondo = document.createElement('audio');
 var audioCielo = document.createElement('audio');
-var audioIntro = document.createElement('audio');
+var audioIstruzioni = document.createElement('audio');
+var audioInfo = document.createElement('audio');
 
 audioGenerale.setAttribute('src', 'audio/generale.mp3');
-audioPelle.setAttribute('src', 'audio/pelle.mp3');
+audioMani.setAttribute('src', 'audio/mani.mp3');
+audioFaccia.setAttribute('src', 'audio/faccia.mp3');
 audioCapelli.setAttribute('src', 'audio/capelli.mp3');
 audioVestito.setAttribute('src', 'audio/vestito.mp3');
 audioSfondo.setAttribute('src', 'audio/sfondo.mp3');
-audioCielo.setAttribute('src', 'audio/smile.mp3');
-audioIntro.setAttribute('src', 'audio/intro.mp3');
+audioCielo.setAttribute('src', 'audio/cielo.mp3');
+audioIstruzioni.setAttribute('src', 'audio/istruzioni.mp3');
+audioInfo.setAttribute('src', 'audio/info.mp3');
 
-var currentAudio = audioIntro;
-var currentAudioName = "Intro";
+var currentAudio = audioGenerale;
+var currentAudioName = "General";
 
 function playSound() {
   currentAudio.play();
@@ -49,7 +53,7 @@ function restartSound() {
 
 function playInfo() {
   restart();
-  currentAudio = audioIntro;
+  currentAudio = audioInfo;
   currentAudioName = "Intro";
   $("#instructions").css("background", "#999");
   setTimeout(function() {
@@ -69,24 +73,39 @@ function restart() {
   currentAudio.pause();
 
   audioGenerale.currentTime = 0;
-  audioPelle.currentTime = 0;
+  audioMani.currentTime = 0;
+  audioFaccia.currentTime = 0;
   audioCapelli.currentTime = 0;
   audioVestito.currentTime = 0;
   audioSfondo.currentTime = 0;
   audioCielo.currentTime = 0;
-  audioIntro.currentTime = 0;
+  audioIstruzioni.currentTime = 0;
+  audioInfo.currentTime = 0;
 
   $("#play").css("background", "#fff");
   $("#pause").css("background", "#999");
 };
 
+// function startDemo() {
+//   playSound();
+// }
+
 function startDemo() {
-  $("#intro").css("display", "none");
-  $("#tool").css("display", "block");
   playSound();
+  $("#start").css("display", "none");
+  $("lottie-player").css("display", "block");
+  setTimeout(function() {
+    currentAudio = audioIstruzioni;
+    playSound();
+    $("body").css("background-color", "white");
+    $("#intro").css("display", "none");
+    $("#tool").css("display", "block");
+  }, 57000);
 }
 
 $("#intro").click(startDemo);
+
+
 
 // function clickPelle() {
 //   navigator.vibrate(0);
@@ -148,10 +167,17 @@ function stopVibrating() {
 // $("#cielo").on("mouseup", stopVibrating)
 
 
-function doubleClickPelle() {
+function doubleClickMani() {
   restart();
-  currentAudio = audioPelle;
-  currentAudioName = "Skin";
+  currentAudio = audioMani;
+  currentAudioName = "Hands";
+  playSound();
+}
+
+function doubleClickFaccia() {
+  restart();
+  currentAudio = audioFaccia;
+  currentAudioName = "Face";
   playSound();
 }
 
@@ -178,12 +204,13 @@ function doubleClickSfondo() {
 
 function doubleClickCielo() {
   restart();
-  currentAudio = audioGenerale;
+  currentAudio = audioCielo;
   currentAudioName = "Sky";
   playSound();
 }
 
-$("#pelle").on("dblclick", doubleClickPelle)
+$("#mani").on("dblclick", doubleClickMani)
+$("#faccia").on("dblclick", doubleClickFaccia)
 $("#capelli").on("dblclick", doubleClickCapelli)
 $("#vestito").on("dblclick", doubleClickVestito)
 $("#sfondo").on("dblclick", doubleClickSfondo)
