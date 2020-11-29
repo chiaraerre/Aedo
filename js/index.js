@@ -103,7 +103,7 @@ function playInfo() {
 }
 
 setInterval(function() {
-  if (currentAudioName == "Intro") {
+  if ((currentAudioName == "Intro") & (currentAudio.currentTime < currentAudio.duration)) {
     $("#icon-info").css("display", "none");
     $("#icon-infoActive").css("display", "inline-block");
   } else {
