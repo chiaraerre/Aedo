@@ -20,27 +20,49 @@ audioInfo.setAttribute('src', 'audio/info.mp3');
 
 var currentAudio = audioGenerale;
 var currentAudioName = "General";
+var playing;
+var speed = 1;
 
 function playSound() {
   currentAudio.play();
-  $("#play").css("background", "#999");
-  $("#pause").css("background", "#fff");
+  playing = true
+  $("#icon-play").css("display", "inline-block");
+  $("#icon-pause").css("display", "none");
   $("#status").text(currentAudioName + " Playing");
   setInterval(function() {
     if (currentAudio.currentTime == currentAudio.duration) {
-      $("#play").css("background", "#fff");
-      $("#pause").css("background", "#999");
+      $("#icon-play").css("display", "none");
+      $("#icon-pause").css("display", "inline-block");
+      $("#icon-info").css("display", "inline-block");
+      $("#icon-infoActive").css("display", "none");
       $("#status").text("Not Playing");
     }
   }, 500);
-};
+
+  setInterval(function() {
+    if (speed == 1) {
+      currentAudio.playbackRate = 1;
+    } else {
+      currentAudio.playbackRate = 1.3;
+    }
+  }), 500;
+}
 
 function pauseSound() {
+  playing = false
   currentAudio.pause();
-  $("#play").css("background", "#fff");
-  $("#pause").css("background", "#999");
+  $("#icon-play").css("display", "none");
+  $("#icon-pause").css("display", "inline-block");
   $("#status").text(currentAudioName + " Paused");
 };
+
+function playPause() {
+  if (playing == false) {
+    playSound()
+  } else {
+    pauseSound()
+  }
+}
 
 function restartSound() {
   currentAudio.currentTime = 0;
@@ -51,20 +73,40 @@ function restartSound() {
   playSound();
 };
 
+function increaseSpeed() {
+  speed = 2;
+  $("#icon-speedFast").css("display", "inline-block");
+  $("#icon-speedSlow").css("display", "none");
+  currentAudio.playbackRate = 1.5;
+};
+
+function decreaseSpeed() {
+  speed = 1;
+  $("#icon-speedFast").css("display", "none");
+  $("#icon-speedSlow").css("display", "inline-block");
+  currentAudio.playbackRate = 1;
+};
+
+function toggleSpeed() {
+  if (speed == 1) {
+    increaseSpeed()
+  } else {
+    decreaseSpeed()
+  }
+}
+
 function playInfo() {
   restart();
   currentAudio = audioInfo;
   currentAudioName = "Intro";
-  $("#instructions").css("background", "#999");
-  setTimeout(function() {
-    $("#instructions").css("background", "#fff");
-  }, 200);
+  $("#icon-info").css("display", "none");
+  $("#icon-infoActive").css("display", "inline-block");
   playSound();
 }
 
-$('#play').click(playSound);
+$('#play').click(playPause);
 $('#pause').click(pauseSound);
-$('#restart').click(restartSound);
+$('#speed').click(toggleSpeed);
 $('#instructions').click(playInfo);
 
 function restart() {
@@ -154,12 +196,12 @@ function stopVibrating() {
   navigator.vibrate(0);
 }
 
-$("#mani").on("touchstart", clickPelle)
-$("#faccia").on("touchstart", clickPelle)
-$("#capelli").on("touchstart", clickCapelli)
-$("#vestito").on("touchstart", clickVestito)
-$("#sfondo").on("touchstart", clickSfondo)
-$("#cielo").on("touchstart", clickCielo)
+$("#mani").on("touchstart", clickPelle);
+$("#faccia").on("touchstart", clickPelle);
+$("#capelli").on("touchstart", clickCapelli);
+$("#vestito").on("touchstart", clickVestito);
+$("#sfondo").on("touchstart", clickSfondo);
+$("#cielo").on("touchstart", clickCielo);
 //
 // $("#pelle").on("touchend", stopVibrating)
 // $("#capelli").on("touchend", stopVibrating)
@@ -222,12 +264,12 @@ function doubleClickCielo() {
   playSound();
 }
 
-$("#mani").on("dblclick", doubleClickMani)
-$("#faccia").on("dblclick", doubleClickFaccia)
-$("#capelli").on("dblclick", doubleClickCapelli)
-$("#vestito").on("dblclick", doubleClickVestito)
-$("#sfondo").on("dblclick", doubleClickSfondo)
-$("#cielo").on("dblclick", doubleClickCielo)
+$("#mani").on("dblclick", doubleClickMani);
+$("#faccia").on("dblclick", doubleClickFaccia);
+$("#capelli").on("dblclick", doubleClickCapelli);
+$("#vestito").on("dblclick", doubleClickVestito);
+$("#sfondo").on("dblclick", doubleClickSfondo);
+$("#cielo").on("dblclick", doubleClickCielo);
 
 var vibrating;
 

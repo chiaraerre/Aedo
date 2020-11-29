@@ -1,16 +1,3 @@
-@font-face {
-  font-family: cambonItalic;
-  src: url(../font/Cambon-Italic.otf);
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: cambonRegular;
-  src: url(../font/Cambon-Regular.otf);
-  font-weight: bold;
-  font-style: italic;
-}
 
 html, body {
   overflow: hidden;
@@ -30,8 +17,9 @@ path.attivo {
 .dark {
   background-color: #222;
 }
+
 #intro {
-  font-family: CambonItalic;
+  font-family: 'Playfair Display', serif;
   z-index: 100;
   position: absolute;
   width: 100vw;
@@ -45,12 +33,11 @@ path.attivo {
 }
 
 #skip {
-  font-family: CambonItalic;
+  font-family: 'Playfair Display', serif;
   text-align: center;
   color: white;
   font-size: 0.7em;
 }
-
 
 #info {
   width: 100%;
@@ -58,7 +45,7 @@ path.attivo {
   top: 15px;
   color: #666;
   font-size: 0.8em;
-  font-family: CambonRegular;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 p {
@@ -66,20 +53,17 @@ p {
 }
 
 .button {
-  opacity: 40%;
-  width: 5vh;
-  height: 5vh;
+  width: 10vh;
+  height: 10vh;
   background: #fff;
-  border: 1px solid black;
-  padding: 2vh;
-  border-radius: 10px;
   display: inline-block;
   margin: 0.5vh;
   cursor: pointer;
+  box-shadow: 0px 25px 30px rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
 }
 
-
 .icon {
-  width: 5vh;
-  height: 5vh;
+  width: 10vh;
+  height: 10vh;
 }

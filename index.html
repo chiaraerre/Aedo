@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <title>Aedo</title>
 
   <link rel="apple-touch-icon" sizes="57x57" href="app/apple-icon-57x57.png">
@@ -148,18 +150,19 @@
     </div>
 
     <div id="controls" style="text-align:center">
+      <div class="button" id="speed">
+        <img class="icon" id="icon-speedFast" style="display:none;" src="icons/slow.png">
+        <img class="icon" id="icon-speedSlow" src="icons/fast.png">
+      </div>
       <div class="button" id="play">
-        <img class="icon" src="icons/play-solid.svg">
+        <img class="icon" id="icon-play" src="icons/play.png">
+        <img class="icon" id="icon-pause" style="display:none;" src="icons/pause.png">
       </div>
-      <div class="button" id="pause" style="background:#999">
-        <img class="icon" src="icons/pause-solid.svg">
-      </div>
-      <div class="button" id="restart">
-        <img class="icon" src="icons/redo-alt-solid.svg">
-      </div>
-      <div style="width:4vh; display:inline-block"></div>
+      <!-- <div class="button" id="pause" style="background:#999">
+      </div> -->
       <div class="button" id="instructions">
-        <img class="icon" src="icons/info-solid.svg">
+        <img class="icon" id="icon-info" src="icons/info.png">
+        <img class="icon" id="icon-infoActive" style="display:none;" src="icons/info_active.png">
       </div>
     </div>
 
