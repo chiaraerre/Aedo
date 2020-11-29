@@ -64,14 +64,14 @@ function playPause() {
   }
 }
 
-function restartSound() {
-  currentAudio.currentTime = 0;
-  $("#restart").css("background", "#999");
-  setTimeout(function() {
-    $("#restart").css("background", "#fff");
-  }, 200);
-  playSound();
-};
+// function restartSound() {
+//   currentAudio.currentTime = 0;
+//   $("#restart").css("background", "#999");
+//   setTimeout(function() {
+//     $("#restart").css("background", "#fff");
+//   }, 200);
+//   playSound();
+// };
 
 function increaseSpeed() {
   speed = 2;
@@ -99,10 +99,18 @@ function playInfo() {
   restart();
   currentAudio = audioInfo;
   currentAudioName = "Intro";
-  $("#icon-info").css("display", "none");
-  $("#icon-infoActive").css("display", "inline-block");
   playSound();
 }
+
+setInterval(function() {
+  if (currentAudioName == "Intro") {
+    $("#icon-info").css("display", "none");
+    $("#icon-infoActive").css("display", "inline-block");
+  } else {
+    $("#icon-info").css("display", "inline-block");
+    $("#icon-infoActive").css("display", "none");
+  }
+}), 500;
 
 $('#play').click(playPause);
 $('#pause').click(pauseSound);
